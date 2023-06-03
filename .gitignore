@@ -1,0 +1,3 @@
+# Project exclude paths
+/cmake-build-debug-mingw-599/
+/cmake-build-release-mingw-599/

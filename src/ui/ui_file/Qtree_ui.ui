@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Qtree_Class_UI</class>
+ <widget class="QMainWindow" name="Qtree_Class_UI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1843</width>
+    <height>1361</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTreeWidget {
+  border: none;
+  background-color: rgb(235,230,236);
+	font: url(:/ui/images/fonts/Font Awesome 6 Free-Solid-900.otf);
+}
+
+QTreeWidget::item {
+  color: #333333;
+}
+
+QTreeWidget::item:hover {
+  background-color:rgb(113,150,159);
+}
+
+QTreeWidget::item:selected {
+  background-color: rgb(170,160,180);
+
+}
+
+QHeaderView::section {
+  background-color: #f0f0f0;
+  color: #333333;
+
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_1" stretch="0,4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="verticalWidget" native="true">
+        <layout class="QVBoxLayout" name="v2">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="My_Qtreewidget" name="treeWidget_1">
+           <property name="maximumSize">
+            <size>
+             <width>16777214</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <column>
+            <property name="text">
+             <string>文件列表</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="My_Photo_Graphics" name="graphicsView">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>My_Photo_Graphics</class>
+   <extends>QGraphicsView</extends>
+   <header>../../some_function/my_photo_Graphics.h</header>
+  </customwidget>
+  <customwidget>
+   <class>My_Qtreewidget</class>
+   <extends>QTreeWidget</extends>
+   <header>../../some_function/my_qtreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../my_qrc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
