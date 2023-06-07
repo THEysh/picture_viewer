@@ -423,6 +423,7 @@ void C_GifItem::phot_rotate(bool is_right, QGraphicsView *view) {
     position_calculation(view);
 }
 
+
 void C_GifItem::position_calculation(QGraphicsView *view) {
     Item_Interface::position_calculation(view);
     if (graphics_gifItem_unique == nullptr){
