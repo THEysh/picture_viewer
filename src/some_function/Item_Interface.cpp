@@ -437,6 +437,7 @@ void C_GifItem::position_calculation(QGraphicsView *view) {
     graphics_gifItem_unique->setPos(center);
 }
 
+
 void C_GifItem::set_z_val(int num) {
     Item_Interface::set_z_val(num);
     graphics_gifItem_unique->setZValue(num);
