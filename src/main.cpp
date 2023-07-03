@@ -20,7 +20,6 @@ void Resource_Registration(){
     } else {
         qWarning() << "Failed to register resource file，try find currentPath ";
     }
-
 }
 
 bool Generate_qrc(){
