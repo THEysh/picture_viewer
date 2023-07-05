@@ -22,7 +22,6 @@ void Resource_Registration(){
     }
 }
 
-
 bool Generate_qrc(){
 
     QString Project_path = PROJECT_ROOT_DIR ; // 项目路径
