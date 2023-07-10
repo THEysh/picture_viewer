@@ -78,6 +78,5 @@ int main(int argc, char *argv[])
     Ui_Qtree_Class_UI my_ui{};
     Inherit_UI my_class(my_ui,QWidget,openpath);
     QWidget->show();
-
     return QApplication::exec();
 }
