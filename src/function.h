@@ -44,7 +44,7 @@ private:
     //设置窗口之间的拖动
     void Splitter(){
         // 将树形控件和 photo_g 作为子控件添加到 QSplitter 中
-        QSplitter* splitter = new QSplitter(Qt::Horizontal);
+        auto* splitter = new QSplitter(Qt::Horizontal);
         splitter->addWidget(ui_f.verticalWidget);
         splitter->addWidget(photo_g);
         //设置分隔条的宽度

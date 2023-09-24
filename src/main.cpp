@@ -24,22 +24,18 @@ void Resource_Registration(){
 
 
 bool Generate_qrc(){
-
     QString Project_path = PROJECT_ROOT_DIR ; // 项目路径
     QString resourcePath = Project_path + "/src/ui/images/";
     QString qrcFileName = Project_path + "/src/my_qrc.qrc";// 生成的qrc文件名
-
     QFile qrcFile(qrcFileName);
     if(!qrcFile.open(QIODevice::WriteOnly | QIODevice::Text))
     {
         qDebug()<<"Failed to create "<<qrcFileName<<" !";
         return false;
     }
-
     QTextStream out(&qrcFile);
     out << "<RCC>\n";
     out << "<qresource prefix=\"/\">\n";
-
     QDirIterator it(resourcePath, QDirIterator::Subdirectories);
     while (it.hasNext())
     {
@@ -53,7 +49,6 @@ bool Generate_qrc(){
     }
     out << "</qresource>\n";
     out << "</RCC>\n";
-
     qrcFile.close();
     return true;
 }

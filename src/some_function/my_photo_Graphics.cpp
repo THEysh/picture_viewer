@@ -24,7 +24,6 @@ My_Photo_Graphics::My_Photo_Graphics(QWidget *parent):
         arload_image(nullptr),
         image_timer(new QTimer),
         scene(new QGraphicsScene()){
-
     or_background.load(":ui/images/pic_b/wallhaven-nkqrgd.png");
     this->setScene(scene);
     setRenderHint(QPainter::Antialiasing, true);
@@ -62,7 +61,6 @@ void My_Photo_Graphics::resizeEvent(QResizeEvent *event) {
     scene->setSceneRect(new_rect);
     background = or_background.scaled(this->size(), Qt::IgnoreAspectRatio);
     this->setBackgroundBrush(QBrush(background));
-
     if (item_queue.size()>1){
         qDebug()<<"size大于1是对比模式，不更新图片";
         return;
